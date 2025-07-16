@@ -8,13 +8,33 @@
     "scheme": "suvarnabhagya",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": [
+        "expo.ts",
+        "expo.tsx",
+        "expo.js",
+        "expo.jsx",
+        "ts",
+        "tsx",
+        "js",
+        "jsx",
+        "json",
+        "wasm",
+        "svg"
+      ]
+    },
     "ios": {
       "supportsTablet": true
     },
     "android": {
+      "package": "com.mychits.rajath",
+        "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+
+        
       },
       "edgeToEdgeEnabled": true
     },
