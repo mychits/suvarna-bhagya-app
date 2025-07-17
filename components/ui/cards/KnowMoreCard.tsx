@@ -5,6 +5,8 @@ import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import CCard from "./CCard";
 import CCardContent from "./CCardContent";
+import { router } from "expo-router";
+import * as Haptics from 'expo-haptics';
 type ICardData = {
   id: string;
   title: string;
@@ -24,7 +26,11 @@ const KnowMoreCard = ({
   cardDatas,
 }: KnowMoreCardProps) => {
   const cardDatasLength = cardDatas.length;
-
+const onClickHandler = ()=>{
+     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+ 
+  router.push("/(drawer)/(tabs)/(groups)/enrollForm")
+}
   return (
     <View style={[styles.mainContainer, { backgroundColor: bgColor }]}>
       {!!title && (
@@ -85,7 +91,7 @@ const KnowMoreCard = ({
         })}
       </View>
       {!!footerTitle && (
-        <TouchableOpacity style={styles.footerTitleContainer}>
+        <TouchableOpacity style={styles.footerTitleContainer} onPress={onClickHandler}>
           <Text style={styles.footerTitle}>{footerTitle}</Text>
         </TouchableOpacity>
       )}

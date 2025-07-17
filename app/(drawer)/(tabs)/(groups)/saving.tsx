@@ -42,6 +42,7 @@ const Saving = () => {
     router.push(`/knowMore/${id}/?scheme=${scheme}`);
   };
   const onPressJoinNow = (id: string) => {
+  router.push("/(drawer)/(tabs)/(groups)/enrollForm");
 Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium)
   };
   return (
